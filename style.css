@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url(laptop_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.formbox {
+    position: relative;
+    border: 1px solid white;
+    height: 550px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.formbox span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #1777fd);
+    animation: animate_one 2s linear infinite;
+}
+
+@keyframes animate_one {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translate(100%);
+    }
+}
+
+.formbox span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #1777fd);
+    animation: animate_two 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_two {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.formbox span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to left, transparent, #1777fd);
+    animation: animate_three 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_three {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.formbox span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #1777fd);
+    animation: animate_four 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_four {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+form * {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 2px;
+}
+
+form {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    right: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #1777fd;
+}
+
+h3 {
+    text-align: center;
+    font-size: 16px;
+    line-height: 4;
+    color: #888;
+}
+
+.formdata {
+    margin-top: 30px;
+}
+
+input {
+    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.50);
+    border-bottom: 1px solid #1777fd;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    font-size: 13px;
+}
+
+input:focus {
+    outline: 1px solid #1777fd;
+    background-color: #000;
+}
+
+input:hover {
+    background-color: #000;
+}
+
+button {
+    background-color: #1777fd;
+    padding: 14px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    background-color: #2568c6;
+    border-radius: 0px;
+
+}
+
+.forgot button {
+    background-color: #827f7f;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: normal;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    background-color: #000;
+    border-radius: 0px;
+}
+.formbox{
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.663) ;
+}
